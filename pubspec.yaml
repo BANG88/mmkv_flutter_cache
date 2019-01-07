@@ -1,6 +1,6 @@
 name: mmkv_flutter_cache
 description: A cache for Flutter project implement it with mmkv framework.
-version: 0.0.1
+version: 0.0.2
 author: bang88 <sqibang@gmail.com>
 homepage: https://github.com/bang88/mmkv_flutter_cache
 

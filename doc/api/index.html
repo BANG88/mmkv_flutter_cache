@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="made with love by dartdoc 0.24.1">
+  <meta name="description" content="mmkv_flutter_cache API docs, for the Dart programming language.">
+  <title>mmkv_flutter_cache - Dart API docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/bang88/mmkv_flutter_cache">mmkv_flutter_cache package</a></li>
+  </ol>
+  <div class="self-name">mmkv_flutter_cache</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><span class="package-name">mmkv_flutter_cache</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="mmkv_flutter_cache/mmkv_flutter_cache-library.html">mmkv_flutter_cache</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <section class="desc markdown">
+        <h1 id="mmkv_flutter_cache">mmkv_flutter_cache</h1>
+<p><a href="https://pub.dartlang.org/packages/mmkv_flutter_cache"><img alt="pub package" src="https://img.shields.io/pub/v/mmkv_flutter_cache.svg"></a></p>
+<blockquote>
+<p>A cache for Flutter project implement it with mmkv framework. and support expires</p></blockquote>
+<h2 id="getting-started">Getting Started</h2>
+<pre class="language-yaml"><code class="language-yaml">dependencies:
+  mmkv_flutter_cache: ^0.0.2
+</code></pre>
+<h3 id="usage">Usage</h3>
+<pre class="language-dart"><code class="language-dart">import 'package:mmkv_flutter_cache/mmkv_flutter_cache.dart';
+
+/// add value to cache will expired in 1 hour
+final boolRes = await Cache.add('key', 'value', { expired: 1 } );
+
+/// get value from cache
+final value = await Cache.get('key');
+
+</code></pre>
+      </section>
+      
+        <section class="summary">
+            <h2>Libraries</h2>
+          <dl>
+            <dt id="mmkv_flutter_cache">
+              <span class="name"><a href="mmkv_flutter_cache/mmkv_flutter_cache-library.html">mmkv_flutter_cache</a></span> 
+            </dt>
+            <dd>
+              
+            </dd>          </dl>
+        </section>
+
+  </div> <!-- /.main-content -->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    mmkv_flutter_cache 0.0.2
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>
