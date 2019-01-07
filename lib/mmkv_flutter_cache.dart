@@ -18,15 +18,15 @@ class Cache {
   }
 
   /// get item from cache if its not exists or has expired return null
-  static Future get(String key) async {
+  static Future<String> get(String key) async {
     MmkvFlutter mmkv = await MmkvFlutter.getInstance();
     final value = await mmkv.getString(_getPrefix(key));
     if (value == null || value.isEmpty) {
-      return null;
+      return '';
     }
     final index = value.indexOf(':');
     if (index < 0) {
-      return null;
+      return '';
     }
 
     /// get timespan
@@ -35,7 +35,7 @@ class Cache {
         int.parse(timespan).compareTo(DateTime.now().millisecondsSinceEpoch);
     if (diff < 1) {
       await mmkv.removeByKey(_getPrefix(key));
-      return null;
+      return '';
     }
 
     /// get user data except `:`

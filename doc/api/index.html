@@ -47,13 +47,13 @@
 <p>A cache for Flutter project implement it with mmkv framework. and support expires</p></blockquote>
 <h2 id="getting-started">Getting Started</h2>
 <pre class="language-yaml"><code class="language-yaml">dependencies:
-  mmkv_flutter_cache: ^0.0.2
+  mmkv_flutter_cache: ^0.0.3
 </code></pre>
 <h3 id="usage">Usage</h3>
 <pre class="language-dart"><code class="language-dart">import 'package:mmkv_flutter_cache/mmkv_flutter_cache.dart';
 
 /// add value to cache will expired in 1 hour
-final boolRes = await Cache.add('key', 'value', { expired: 1 } );
+final boolRes = await Cache.add('key', 'value', expired: 1  );
 
 /// get value from cache
 final value = await Cache.get('key');
@@ -78,7 +78,7 @@ final value = await Cache.get('key');
 
 <footer>
   <span class="no-break">
-    mmkv_flutter_cache 0.0.2
+    mmkv_flutter_cache 0.0.3
   </span>
 
 </footer>

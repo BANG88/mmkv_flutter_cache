@@ -9,7 +9,7 @@
 
 ```yaml
 dependencies:
-  mmkv_flutter_cache: ^0.0.2
+  mmkv_flutter_cache: ^0.0.3
 ```
 
 ### Usage
@@ -18,7 +18,7 @@ dependencies:
 import 'package:mmkv_flutter_cache/mmkv_flutter_cache.dart';
 
 /// add value to cache will expired in 1 hour
-final boolRes = await Cache.add('key', 'value', { expired: 1 } );
+final boolRes = await Cache.add('key', 'value', expired: 1  );
 
 /// get value from cache
 final value = await Cache.get('key');

@@ -67,7 +67,7 @@
     <h1>get method</h1>
 
     <section class="multi-line-signature">
-      <span class="returntype">Future</span>
+      <span class="returntype">Future<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span>
       <span class="name ">get</span>
 (<wbr><span class="parameter" id="get-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
       
@@ -78,15 +78,15 @@
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span> </h2>
-      <pre class="language-dart"><code class="language-dart">static Future get(String key) async {
+      <pre class="language-dart"><code class="language-dart">static Future&lt;String&gt; get(String key) async {
   MmkvFlutter mmkv = await MmkvFlutter.getInstance();
   final value = await mmkv.getString(_getPrefix(key));
   if (value == null || value.isEmpty) {
-    return null;
+    return &#39;&#39;;
   }
   final index = value.indexOf(&#39;:&#39;);
   if (index &lt; 0) {
-    return null;
+    return &#39;&#39;;
   }
 
   &#47;&#47;&#47; get timespan
@@ -95,7 +95,7 @@
       int.parse(timespan).compareTo(DateTime.now().millisecondsSinceEpoch);
   if (diff &lt; 1) {
     await mmkv.removeByKey(_getPrefix(key));
-    return null;
+    return &#39;&#39;;
   }
 
   &#47;&#47;&#47; get user data except `:`
@@ -113,7 +113,7 @@
 
 <footer>
   <span class="no-break">
-    mmkv_flutter_cache 0.0.2
+    mmkv_flutter_cache 0.0.3
   </span>
 
 </footer>
