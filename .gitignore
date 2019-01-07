@@ -8,3 +8,4 @@ build/
 ios/
 android/
 .flutter-plugins
+.idea
