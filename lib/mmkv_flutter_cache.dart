@@ -42,4 +42,13 @@ class Cache {
     final v = value.substring(index + 1);
     return v;
   }
+
+  /// clear item by key or clear all if key not provided
+  static Future<bool> clear({String key = ""}) async {
+    MmkvFlutter mmkv = await MmkvFlutter.getInstance();
+    if (key.isNotEmpty) {
+      return mmkv.removeByKey(key);
+    }
+    return mmkv.clear();
+  }
 }

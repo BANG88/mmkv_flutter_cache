@@ -9,7 +9,7 @@
 
 ```yaml
 dependencies:
-  mmkv_flutter_cache: ^0.0.3
+  mmkv_flutter_cache: ^0.0.4
 ```
 
 ### Usage
